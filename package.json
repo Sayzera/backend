@@ -4,12 +4,11 @@
   "description": "",
   "main": "api/app.js",
   "scripts": {
-    "start": "tsc && node api/app.js",
+    "start": "tsc && node dist/app.js",
     "dev": "nodemon --exec npx ts-node api/app.ts",
     "lint": "eslint . - ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tsc && node api/app.js"
-    
+    "build":"tsc && node dist/app.js"
   },
   "keywords": [],
   "author": "nod",
