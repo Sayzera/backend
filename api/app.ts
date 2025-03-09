@@ -1,4 +1,3 @@
-// src/app.ts
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/config';
@@ -15,7 +14,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // Middleware
 app.use(express.json());

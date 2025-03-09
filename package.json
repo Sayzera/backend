@@ -2,13 +2,12 @@
   "name": "Node-Ts-NOD",
   "version": "1.0.0",
   "description": "",
-  "main": "api/app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "node dist/app.js",
     "dev": "nodemon --exec npx ts-node api/app.ts",
     "lint": "eslint . - ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"tsc && node dist/app.js"
+    "build":"tsc"
   },
   "keywords": [],
   "author": "nod",
