@@ -13,11 +13,21 @@ dotenv_1.default.config();
 // MongoDB'ye bağlan
 (0, config_1.connectDB)();
 const app = (0, express_1.default)();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
-app.use((0, cors_1.default)());
+const corsOpts = {
+    origin: '*',
+    methods: [
+        'GET',
+        'POST',
+    ],
+    allowedHeaders: [
+        'Content-Type',
+    ],
+};
+app.use((0, cors_1.default)(corsOpts));
 // Routes
 app.use('/api/auth', authRoutes_1.default);
 app.use('/api/task', taskRoutes_1.default);
